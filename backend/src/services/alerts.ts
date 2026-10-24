@@ -374,6 +374,7 @@ export class AlertEngine {
           acknowledgedBy: actorId,
         });
         await audit(this.deps, alphaId, actorId, 'alert.acknowledged', { alertId, type: alert.type });
+        this.deps.log.info('alert.acknowledged', { alertId, alphaId });
         return updated;
       } catch (err) {
         if (!(err instanceof ConditionFailedError)) throw err;
@@ -402,6 +403,7 @@ export class AlertEngine {
           await this.deps.repo.setCooldown(alphaId, alert.type, new Date(this.deps.now().getTime() + alert.cooldownSeconds * 1000));
         }
         await audit(this.deps, alphaId, actorId, 'alert.resolved', { alertId, type: alert.type, resolution });
+        this.deps.log.info('alert.resolved', { alertId, alphaId, resolution });
         return updated;
       } catch (err) {
         if (!(err instanceof ConditionFailedError)) throw err;

@@ -133,9 +133,7 @@ final class EndToEndUITests: XCTestCase {
         let ackAlarm = app.buttons["acknowledgeAlarm"]
         XCTAssertTrue(ackAlarm.waitForExistence(timeout: 20), "alarm for the open help request")
         sleep(1) // let the full-screen cover finish presenting
-        // Coordinate tap: while the alarm is sounding, XCUITest computes no hit point ({-1, -1})
-        // for buttons on this cover and a plain tap() never lands.
-        ackAlarm.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        ackAlarm.tap()
         let card = app.buttons["alphaCard-\(alphaName)"]
         XCTAssertTrue(card.waitForExistence(timeout: 20))
         // Wait for the alarm's full-screen cover to finish dismissing.
@@ -157,7 +155,9 @@ final class EndToEndUITests: XCTestCase {
         let alertRow = app.buttons["alert-manualHelpRequest"]
         XCTAssertTrue(alertRow.waitForExistence(timeout: 10))
         alertRow.tap()
-        XCTAssertTrue(app.buttons["resolveAlert"].waitForExistence(timeout: 10), "acknowledged from the alarm screen")
+        let resolve = app.buttons["resolveAlert"]
+        for _ in 0..<4 where !resolve.exists { app.swipeUp() } // lazily created below the fold
+        XCTAssertTrue(resolve.waitForExistence(timeout: 10), "acknowledged from the alarm screen")
         XCTAssertFalse(app.buttons["acknowledgeAlert"].exists)
         app.terminate()
 

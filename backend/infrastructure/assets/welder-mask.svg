@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Welder's mask">
+  <!-- Welder's mask logo. Single brand color (#0A7E8C) on a transparent background.
+       Flat/line style so it reads well at small sizes on the sign-in form. -->
+  <g fill="none" stroke="#0A7E8C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Helmet shell: rounded dome tapering to a flared chin guard -->
+    <path d="M52 22
+             C40 22 33 31 33 44
+             L33 96
+             C33 112 42 124 56 130
+             L60 143
+             C62 148 68 148 70 143
+             L73 134
+             L87 134
+             L90 143
+             C92 148 98 148 100 143
+             L104 130
+             C118 124 127 112 127 96
+             L127 44
+             C127 31 120 22 108 22
+             Z" fill="#0A7E8C" fill-opacity="0.08"/>
+    <!-- Lens window (the dark viewing glass) -->
+    <rect x="52" y="52" width="56" height="26" rx="5" fill="#0A7E8C" fill-opacity="0.85" stroke="none"/>
+    <!-- Lens frame -->
+    <rect x="52" y="52" width="56" height="26" rx="5"/>
+    <!-- Top vent lines -->
+    <line x1="60" y1="38" x2="100" y2="38"/>
+  </g>
+</svg>

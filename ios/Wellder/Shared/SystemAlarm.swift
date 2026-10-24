@@ -19,8 +19,12 @@ enum SystemAlarm {
     /// Stopped while `schedule` was still in flight; the alarm is stopped as soon as it exists.
     private static var stoppedEarly: Set<String> = []
 
+    /// UI tests drive the in-app alarm; a system alarm would sit above the app (outside its
+    /// screenshots) and swallow the test's taps. The simulator remembers an earlier "Allow".
+    private static let disabledForUITests = ProcessInfo.processInfo.arguments.contains("-uiTesting")
+
     static var isAuthorized: Bool {
-        guard #available(iOS 26.0, *) else { return false }
+        guard #available(iOS 26.0, *), !disabledForUITests else { return false }
         return AlarmManager.shared.authorizationState == .authorized
     }
 

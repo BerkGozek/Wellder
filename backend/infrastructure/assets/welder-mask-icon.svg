@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Wellder app icon">
+  <!-- App-icon source: opaque (no transparency), full square, no rounded corners.
+       Xcode applies the squircle mask. Brand color #0A7E8C background, light mask. -->
+  <rect width="1024" height="1024" fill="#0A7E8C"/>
+  <g transform="translate(512,512) scale(5.0) translate(-80,-80)">
+    <g fill="none" stroke="#F2FAFB" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+      <!-- Helmet shell: rounded dome tapering to a flared chin guard -->
+      <path d="M52 22
+               C40 22 33 31 33 44
+               L33 96
+               C33 112 42 124 56 130
+               L60 143
+               C62 148 68 148 70 143
+               L73 134
+               L87 134
+               L90 143
+               C92 148 98 148 100 143
+               L104 130
+               C118 124 127 112 127 96
+               L127 44
+               C127 31 120 22 108 22
+               Z" fill="#F2FAFB" fill-opacity="0.12"/>
+      <!-- Lens window (the dark viewing glass) -->
+      <rect x="52" y="52" width="56" height="26" rx="5" fill="#063E45" stroke="none"/>
+      <!-- Lens frame -->
+      <rect x="52" y="52" width="56" height="26" rx="5"/>
+      <!-- Top vent line -->
+      <line x1="60" y1="38" x2="100" y2="38"/>
+    </g>
+  </g>
+</svg>

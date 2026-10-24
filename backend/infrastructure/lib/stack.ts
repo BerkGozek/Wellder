@@ -16,6 +16,7 @@ import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { Topic } from 'aws-cdk-lib/aws-sns';
 import { EmailSubscription } from 'aws-cdk-lib/aws-sns-subscriptions';
 import type { Construct } from 'constructs';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 export interface WellderStackProps extends StackProps {
@@ -68,9 +69,17 @@ export class WellderStack extends Stack {
       mfa: cognito.Mfa.OPTIONAL,
       mfaSecondFactor: { otp: true, sms: false },
       accountRecovery: cognito.AccountRecovery.EMAIL_ONLY,
+      // Essentials unlocks the modern Managed Login branding editor/API (the Lite plan only has
+      // the legacy Hosted UI). See the managed-login branding block below.
+      featurePlan: cognito.FeaturePlan.ESSENTIALS,
       removalPolicy: prod ? RemovalPolicy.RETAIN : RemovalPolicy.DESTROY,
     });
-    const domain = userPool.addDomain('Domain', { cognitoDomain: { domainPrefix: props.cognitoDomainPrefix } });
+    // managedLoginVersion: NEWER_MANAGED_LOGIN serves the redesigned sign-in experience that the
+    // CfnManagedLoginBranding below styles (CLASSIC_HOSTED_UI ignores managed-login branding).
+    const domain = userPool.addDomain('Domain', {
+      cognitoDomain: { domainPrefix: props.cognitoDomainPrefix },
+      managedLoginVersion: cognito.ManagedLoginVersion.NEWER_MANAGED_LOGIN,
+    });
     const callback = 'wellder://auth/callback';
     const appClient = userPool.addClient('IosApp', {
       generateSecret: false, // public native client: authorization code + PKCE
@@ -87,6 +96,44 @@ export class WellderStack extends Stack {
       accessTokenValidity: Duration.hours(1),
       refreshTokenValidity: Duration.days(30),
     });
+
+    // Managed Login branding for the Hosted UI the iOS app opens via ASWebAuthenticationSession.
+    // `settings` overrides the brand accents and `assets` supplies the logo (a hand-authored
+    // welder's-mask SVG read + base64-encoded at synth time). Refine colours/logo here (not in the
+    // console) so the look is reproducible and survives a dev-stack teardown.
+    const brandColor = '#0A7E8C'; // Wellder accent; change to taste
+    const logoSvg = readFileSync(fileURLToPath(new URL('../assets/welder-mask.svg', import.meta.url)));
+    const branding = new cognito.CfnManagedLoginBranding(this, 'LoginBranding', {
+      userPoolId: userPool.userPoolId,
+      clientId: appClient.userPoolClientId,
+      useCognitoProvidedValues: false,
+      returnMergedResources: true,
+      assets: [
+        {
+          category: 'FORM_LOGO',
+          colorMode: 'DYNAMIC', // same asset in light and dark mode
+          extension: 'svg',
+          bytes: logoSvg.toString('base64'),
+          resourceId: 'form-logo',
+        },
+      ],
+      settings: {
+        components: {
+          primaryButton: {
+            lightMode: {
+              defaults: { backgroundColor: brandColor, textColor: 'ffffffff' },
+              hover: { backgroundColor: '086975ff', textColor: 'ffffffff' },
+            },
+            darkMode: {
+              defaults: { backgroundColor: brandColor, textColor: 'ffffffff' },
+              hover: { backgroundColor: '0b96a6ff', textColor: 'ffffffff' },
+            },
+          },
+        },
+      },
+    });
+    // Branding reads the pool's managed-login version, so make the ordering explicit.
+    branding.node.addDependency(domain);
 
     // ---------- Secrets (created out-of-band; never in this repo) ----------
     const apnsSecret = props.apnsSecretArn ? Secret.fromSecretCompleteArn(this, 'ApnsSecret', props.apnsSecretArn) : undefined;
