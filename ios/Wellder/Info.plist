@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ABAPIBaseURL</key>
+	<string>$(AB_API_BASE_URL)</string>
+	<key>ABAPNsEnvironment</key>
+	<string>$(AB_APNS_ENVIRONMENT)</string>
+	<key>ABBackendMode</key>
+	<string>$(AB_BACKEND_MODE)</string>
+	<key>ABCognitoClientId</key>
+	<string>$(AB_COGNITO_CLIENT_ID)</string>
+	<key>ABCognitoDomain</key>
+	<string>$(AB_COGNITO_DOMAIN)</string>
+	<key>ABCriticalAlertsEntitled</key>
+	<string>$(AB_CRITICAL_ALERTS_ENTITLED)</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.berkgozek.AlphaBeta.refresh</string>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Wellder</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.berkgozek.AlphaBeta</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wellder</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSAlarmKitUsageDescription</key>
+	<string>Wellder sounds an alarm, even on silent, when someone you look after needs attention or your own heart rate is outside your limits.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Wellder reads heart-rate measurements from Apple Health so the caregivers you approve can see them and be alerted to readings outside the range you set.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Wellder does not write to Apple Health.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Wellder connects to a development server on your local network during testing.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allowing location "Always" lets Wellder keep your approved caregivers updated while the app is closed. You can turn this off at any time.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Wellder shares your location with the caregivers you approve.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Wellder uses motion and step data to estimate whether you have been moving recently, and for experimental fall detection.</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+		<string>audio</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

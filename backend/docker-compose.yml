@@ -1,0 +1,7 @@
+# Optional: DynamoDB Local, used to exercise the real DynamoDB adapter without an AWS account.
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:2.5.4
+    command: "-jar DynamoDBLocal.jar -inMemory -sharedDb"
+    ports:
+      - "8000:8000"

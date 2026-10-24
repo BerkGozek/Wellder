@@ -1,0 +1,29 @@
+{
+  "alerts": [
+    {
+      "alertId": "00mor9nsw035ab5b92b347",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "type": "possibleFall",
+      "category": "safety",
+      "severity": "critical",
+      "status": "open",
+      "title": "No response after possible fall",
+      "message": "Margaret Lee did not respond to a possible-fall check. This does not confirm an injury — please check on them.",
+      "simulated": true,
+      "occurrences": 1,
+      "detectedAt": "2026-05-04T14:00:00.000Z",
+      "receivedAt": "2026-05-04T14:00:00.000Z",
+      "escalationStep": 0,
+      "retentionDays": 365,
+      "sourceEventId": "379b80d0-0717-4710-aab0-0b8ba4dccbee",
+      "evidence": {
+        "detector": "experimental",
+        "confidence": 0.75
+      },
+      "nextEscalationAt": "2026-05-04T14:05:00.000Z",
+      "version": 4,
+      "firstNotificationSentAt": "2026-05-04T14:02:00.000Z",
+      "firstDeliveryConfirmedAt": "2026-05-04T14:02:00.000Z"
+    }
+  ]
+}

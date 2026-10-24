@@ -1,0 +1,25 @@
+{
+  "asAlpha": [],
+  "asBeta": [
+    {
+      "relationshipId": "c9efad93-1497-451e-b0d6-5f4b25c77340.029f4079-520c-433c-a2d4-09db3b59fb07",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "betaId": "029f4079-520c-433c-a2d4-09db3b59fb07",
+      "alphaName": "Margaret Lee",
+      "betaName": "Daniel Lee",
+      "betaEmail": "beta@fixture.test",
+      "permissions": {
+        "viewLocation": true,
+        "viewMovementHistory": true,
+        "viewHeartRate": true,
+        "viewActivity": true,
+        "receiveAlerts": true,
+        "manageSettings": false,
+        "manageEmergencyContacts": false
+      },
+      "status": "active",
+      "createdAt": "2026-05-04T14:00:00.000Z",
+      "approvedAt": "2026-05-04T14:00:00.000Z"
+    }
+  ]
+}

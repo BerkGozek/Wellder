@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DEB941CA36BCA65738D77DA /* SettingsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6CA560E74B672F7A4F9B6 /* SettingsEditor.swift */; };
+		17C7AE529A932E1576C57D06 /* AlarmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CDA5169E82573C24BDA97 /* AlarmPlayer.swift */; };
+		238075AF9D6CF17D6023D4DD /* WellderWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC830684774BABD4AC5A829 /* WellderWatchApp.swift */; };
+		2C4FCC0D0C33F079D047F35B /* WatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31BA4CD952F0701A0671B5 /* WatchModel.swift */; };
+		463B452224ED94440E0E6000 /* AlphaMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2501E1345E3EF5D4BD37ABC /* AlphaMonitor.swift */; };
+		47DB7795B7279B1C1B544CC1 /* SimulationControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BD11BB32D86624E48A4A5 /* SimulationControlsView.swift */; };
+		48921562F5DE588978595450 /* AlphaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AFEF42BAB64DB705118B /* AlphaDetailView.swift */; };
+		4FA3ED73FCFD89D42B1D9732 /* MonitoringCore in Frameworks */ = {isa = PBXBuildFile; productRef = 250EAF3743F4B02B5543C48B /* MonitoringCore */; };
+		522B20616E7A0F0F69C1D304 /* PhoneWatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88FAC53C339563CE407275 /* PhoneWatchBridge.swift */; };
+		52BDB5CD688DB0BE23B045C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89F96D4175435DA36B4A0DE /* Assets.xcassets */; };
+		5DB75086AC782353B7D9899C /* AppLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFFC2A6B59B80FC5C4495E /* AppLogicTests.swift */; };
+		60503CAE7C5B23B49F5FF27B /* AccountMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3509DAD5874AC1F4A484DA /* AccountMenu.swift */; };
+		620F4F0BFB8E77B5FE782512 /* EndToEndUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A6A607F2E8F3F4DC9E848 /* EndToEndUITests.swift */; };
+		69F7BBFFDB999F7665589599 /* LocationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFF22AADCED411ED700AB5B /* LocationHistoryView.swift */; };
+		713CE91B227947D4C4D58CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB483955AC99FCCC38D821B /* AppDelegate.swift */; };
+		72AB0DD2EE5433F82B8701E9 /* CoreLocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F91B3CB66B97E9695A26B /* CoreLocationTracker.swift */; };
+		79B8BE610B209910CBAD9354 /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = 31F7D7EA57D86EDE80D4A460 /* alarm.caf */; };
+		7C2A83C24B7053E807D81D2C /* BetaSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D078D0EFDCDA8944DCF540C /* BetaSettingsView.swift */; };
+		7E7187D434A948F2820A2C73 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86155ED71605038960E74C7E /* RootView.swift */; };
+		85AE5D7E75C1A37005B96428 /* AlphaRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFCF947DBC07DDEE2F0CA8 /* AlphaRootView.swift */; };
+		8B6B7AF771556315C3AF2F87 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7B14A2AFD5602A0202D13972 /* Networking */; };
+		9664DD825C63AFCB28735F18 /* HealthKitHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329E26FE51A18C5F10FCEBF /* HealthKitHeartRate.swift */; };
+		96B484B4D56DFDD2FAD8A6BD /* LiveHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA690D7C3653A603BC58A9D4 /* LiveHeartRate.swift */; };
+		9A43E2E140132AB1F63B3495 /* MotionCollectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77768E345FBD3DB95C722D /* MotionCollectors.swift */; };
+		A97D75151E07E51335E4A069 /* AlphaSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ADEA56C2790104123316C /* AlphaSettingsView.swift */; };
+		B15DABB7D5F786A6162F8307 /* SharedModels in Frameworks */ = {isa = PBXBuildFile; productRef = 20CADA65C56703719626ED9B /* SharedModels */; };
+		B23CDF200E1C7F6727DD32B4 /* AlertsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14FD4DE78A51855186B546 /* AlertsViews.swift */; };
+		B86CC907CFF3AAAD6ADFA305 /* BetaRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C67B7B5C26CCA71007C4438 /* BetaRootView.swift */; };
+		BAA9B21EEB8A15C83011F039 /* WatchFallMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC923771BC9668982AF317 /* WatchFallMonitor.swift */; };
+		BBEDD914194D13C11DA021EB /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB884F28000916216FA3D4A /* PrivacyView.swift */; };
+		C0CA516DC9E13F7CB57327A7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D150A2601E6F245A2190E57C /* SignInView.swift */; };
+		C184E7BF84369D272DBE1EE9 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B87DD51B56439F6706E55F /* HeartRateView.swift */; };
+		C78E603FE51BE645BFADDB01 /* SharedModels in Frameworks */ = {isa = PBXBuildFile; productRef = 63E6B902BA3CAFBF8C181B28 /* SharedModels */; };
+		CD18969636EC135E33571F64 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459B0E374EE47847E4411D /* OnboardingView.swift */; };
+		D4C2CBEF4A7484063F81D322 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = CDB26CB1EF37C157163CA641 /* Networking */; };
+		DA3CE9EED0FF1778FD587984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884C60318B72B050E418B82B /* Assets.xcassets */; };
+		DF86D2C3ED8F7F786026FB2E /* CaregiversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C2CD6A642B87DEF332AAB /* CaregiversView.swift */; };
+		DFFE10CE7C847AAE290D7B9E /* SystemAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965668DBD7CAE47FC5C690A2 /* SystemAlarm.swift */; };
+		E13504CB3A7D35388915A9C8 /* WellderWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1BB4B1E766520A9546B36F84 /* WellderWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8D51F049BF473A6D6BEBB57 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = BA30254CBE68DA172ACF0D67 /* DesignSystem */; };
+		E93E583401BEF19715B49218 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1878AF33E0D42230C50FF9D2 /* DesignSystem */; };
+		F12718905E8C4B007628AA6B /* MonitoringCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0D29E426BD74810A1CF65851 /* MonitoringCore */; };
+		F153ED214E3DC8BF1B68494D /* WatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CD09B6DE4060F7F5318CC /* WatchContentView.swift */; };
+		F3A085C0C0D14CECF130B068 /* WellderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56005FC71491513716C5D82 /* WellderApp.swift */; };
+		F90CD016BA3332585B3090AB /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41653AF1789E5E1230AACB4E /* AppModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0111BCD3ECEF95353DBAD878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6005718289D447C4738663E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC7D97A73D263F648398E0E4;
+			remoteInfo = WellderWatch;
+		};
+		0F261B76AFB978D5377B4BF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6005718289D447C4738663E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70705D8FD8F47E547E4C1111;
+			remoteInfo = Wellder;
+		};
+		8AB0542D0C2AB00F1C6BE91C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6005718289D447C4738663E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70705D8FD8F47E547E4C1111;
+			remoteInfo = Wellder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F86FFB1DCF6880A4DA87F57 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E13504CB3A7D35388915A9C8 /* WellderWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14C727B98FCF74A62EE9EC7D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14F5AFEF42BAB64DB705118B /* AlphaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaDetailView.swift; sourceTree = "<group>"; };
+		1BB4B1E766520A9546B36F84 /* WellderWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellderWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFC923771BC9668982AF317 /* WatchFallMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFallMonitor.swift; sourceTree = "<group>"; };
+		20277078196FBFC7C6C766ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29C69440733E42B471BCDC36 /* Wellder.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Wellder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F7D7EA57D86EDE80D4A460 /* alarm.caf */ = {isa = PBXFileReference; path = alarm.caf; sourceTree = "<group>"; };
+		343778640A244A6F1C7A0860 /* Wellder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wellder.entitlements; sourceTree = "<group>"; };
+		3D078D0EFDCDA8944DCF540C /* BetaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaSettingsView.swift; sourceTree = "<group>"; };
+		41653AF1789E5E1230AACB4E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		54B87DD51B56439F6706E55F /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		5A14FD4DE78A51855186B546 /* AlertsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViews.swift; sourceTree = "<group>"; };
+		5C112136C4A09D313C766481 /* WellderTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WellderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C67B7B5C26CCA71007C4438 /* BetaRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaRootView.swift; sourceTree = "<group>"; };
+		5DB884F28000916216FA3D4A /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		630A6A607F2E8F3F4DC9E848 /* EndToEndUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndToEndUITests.swift; sourceTree = "<group>"; };
+		679ADEA56C2790104123316C /* AlphaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaSettingsView.swift; sourceTree = "<group>"; };
+		7161E5F27528FDFFC32327CF /* WellderUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WellderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BD606C00A354257F72A971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7D459B0E374EE47847E4411D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7EB483955AC99FCCC38D821B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86155ED71605038960E74C7E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		86B497A441741A6D9056E3D0 /* Wellder-PersonalTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wellder-PersonalTeam.entitlements"; sourceTree = "<group>"; };
+		884C60318B72B050E418B82B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CCFCF947DBC07DDEE2F0CA8 /* AlphaRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaRootView.swift; sourceTree = "<group>"; };
+		8D77768E345FBD3DB95C722D /* MotionCollectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCollectors.swift; sourceTree = "<group>"; };
+		8FFF22AADCED411ED700AB5B /* LocationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHistoryView.swift; sourceTree = "<group>"; };
+		9215F2DE065699FCB8D86802 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		965668DBD7CAE47FC5C690A2 /* SystemAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAlarm.swift; sourceTree = "<group>"; };
+		9B3509DAD5874AC1F4A484DA /* AccountMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMenu.swift; sourceTree = "<group>"; };
+		A07BD11BB32D86624E48A4A5 /* SimulationControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationControlsView.swift; sourceTree = "<group>"; };
+		A94CDA5169E82573C24BDA97 /* AlarmPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPlayer.swift; sourceTree = "<group>"; };
+		AAD6CA560E74B672F7A4F9B6 /* SettingsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditor.swift; sourceTree = "<group>"; };
+		B3EFFC2A6B59B80FC5C4495E /* AppLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogicTests.swift; sourceTree = "<group>"; };
+		BA31BA4CD952F0701A0671B5 /* WatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchModel.swift; sourceTree = "<group>"; };
+		C2501E1345E3EF5D4BD37ABC /* AlphaMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaMonitor.swift; sourceTree = "<group>"; };
+		C56005FC71491513716C5D82 /* WellderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellderApp.swift; sourceTree = "<group>"; };
+		C7E9A056204158E84BFDA320 /* WellderKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WellderKit; path = packages/WellderKit; sourceTree = SOURCE_ROOT; };
+		C89F96D4175435DA36B4A0DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA3CD09B6DE4060F7F5318CC /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
+		D150A2601E6F245A2190E57C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		E114F35882C81C81FC94AD01 /* WellderWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WellderWatch.entitlements; sourceTree = "<group>"; };
+		E329E26FE51A18C5F10FCEBF /* HealthKitHeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHeartRate.swift; sourceTree = "<group>"; };
+		E43F91B3CB66B97E9695A26B /* CoreLocationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationTracker.swift; sourceTree = "<group>"; };
+		EC0C2CD6A642B87DEF332AAB /* CaregiversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiversView.swift; sourceTree = "<group>"; };
+		FA690D7C3653A603BC58A9D4 /* LiveHeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHeartRate.swift; sourceTree = "<group>"; };
+		FC88FAC53C339563CE407275 /* PhoneWatchBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneWatchBridge.swift; sourceTree = "<group>"; };
+		FDC830684774BABD4AC5A829 /* WellderWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellderWatchApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		861B086EEEFA8FAB2D5B53D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78E603FE51BE645BFADDB01 /* SharedModels in Frameworks */,
+				F12718905E8C4B007628AA6B /* MonitoringCore in Frameworks */,
+				8B6B7AF771556315C3AF2F87 /* Networking in Frameworks */,
+				E93E583401BEF19715B49218 /* DesignSystem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD2D9FAA886667B539D0706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15DABB7D5F786A6162F8307 /* SharedModels in Frameworks */,
+				4FA3ED73FCFD89D42B1D9732 /* MonitoringCore in Frameworks */,
+				D4C2CBEF4A7484063F81D322 /* Networking in Frameworks */,
+				E8D51F049BF473A6D6BEBB57 /* DesignSystem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E82EA94D4ADBCA33706AC36 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				E43F91B3CB66B97E9695A26B /* CoreLocationTracker.swift */,
+				E329E26FE51A18C5F10FCEBF /* HealthKitHeartRate.swift */,
+				8D77768E345FBD3DB95C722D /* MotionCollectors.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		185C7910F8327F46104268B0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C7E9A056204158E84BFDA320 /* WellderKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		34F0F6422EFF85A04E9A03B1 /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				A07BD11BB32D86624E48A4A5 /* SimulationControlsView.swift */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		485DEB3D0864D3F1D568C375 /* WellderTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3EFFC2A6B59B80FC5C4495E /* AppLogicTests.swift */,
+			);
+			path = WellderTests;
+			sourceTree = "<group>";
+		};
+		5C6DF8A7567651D48E85EE55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29C69440733E42B471BCDC36 /* Wellder.app */,
+				5C112136C4A09D313C766481 /* WellderTests.xctest */,
+				7161E5F27528FDFFC32327CF /* WellderUITests.xctest */,
+				1BB4B1E766520A9546B36F84 /* WellderWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F4CC622ECCD1D9994ECB108 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				14C727B98FCF74A62EE9EC7D /* Debug.xcconfig */,
+				9215F2DE065699FCB8D86802 /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7CB00B01C1E3FF26FFEF7A27 /* watchos */ = {
+			isa = PBXGroup;
+			children = (
+				F320F93CBA7F0F80B2C310C9 /* WellderWatch */,
+			);
+			path = watchos;
+			sourceTree = "<group>";
+		};
+		7F7F3654173DF6265982AF88 = {
+			isa = PBXGroup;
+			children = (
+				6F4CC622ECCD1D9994ECB108 /* Config */,
+				E6C463F0BF05C7342E3E8553 /* ios */,
+				185C7910F8327F46104268B0 /* Packages */,
+				7CB00B01C1E3FF26FFEF7A27 /* watchos */,
+				5C6DF8A7567651D48E85EE55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FBA7D9A8ADF21F6CBE43F1F /* Wellder */ = {
+			isa = PBXGroup;
+			children = (
+				C89F96D4175435DA36B4A0DE /* Assets.xcassets */,
+				73BD606C00A354257F72A971 /* Info.plist */,
+				86B497A441741A6D9056E3D0 /* Wellder-PersonalTeam.entitlements */,
+				343778640A244A6F1C7A0860 /* Wellder.entitlements */,
+				D5DEC3819E7E5A657A148B90 /* Alpha */,
+				C18970319DF2DDC37D164655 /* App */,
+				D4BF2CC76ECFE43811499AE4 /* Auth */,
+				EAD689F002F85A8955F02A4D /* Beta */,
+				F99A45BDFAB4DB200AC3A6BB /* Resources */,
+				0E82EA94D4ADBCA33706AC36 /* Sensors */,
+				D4F34C4171BDE160E07C407B /* Shared */,
+				34F0F6422EFF85A04E9A03B1 /* Simulation */,
+			);
+			path = Wellder;
+			sourceTree = "<group>";
+		};
+		C18970319DF2DDC37D164655 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7EB483955AC99FCCC38D821B /* AppDelegate.swift */,
+				41653AF1789E5E1230AACB4E /* AppModel.swift */,
+				FC88FAC53C339563CE407275 /* PhoneWatchBridge.swift */,
+				86155ED71605038960E74C7E /* RootView.swift */,
+				C56005FC71491513716C5D82 /* WellderApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CB0A18795B2B17421C40003A /* WellderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				630A6A607F2E8F3F4DC9E848 /* EndToEndUITests.swift */,
+			);
+			path = WellderUITests;
+			sourceTree = "<group>";
+		};
+		D4BF2CC76ECFE43811499AE4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7D459B0E374EE47847E4411D /* OnboardingView.swift */,
+				D150A2601E6F245A2190E57C /* SignInView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D4F34C4171BDE160E07C407B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9B3509DAD5874AC1F4A484DA /* AccountMenu.swift */,
+				A94CDA5169E82573C24BDA97 /* AlarmPlayer.swift */,
+				AAD6CA560E74B672F7A4F9B6 /* SettingsEditor.swift */,
+				965668DBD7CAE47FC5C690A2 /* SystemAlarm.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D5DEC3819E7E5A657A148B90 /* Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				C2501E1345E3EF5D4BD37ABC /* AlphaMonitor.swift */,
+				8CCFCF947DBC07DDEE2F0CA8 /* AlphaRootView.swift */,
+				679ADEA56C2790104123316C /* AlphaSettingsView.swift */,
+				EC0C2CD6A642B87DEF332AAB /* CaregiversView.swift */,
+				5DB884F28000916216FA3D4A /* PrivacyView.swift */,
+			);
+			path = Alpha;
+			sourceTree = "<group>";
+		};
+		E6C463F0BF05C7342E3E8553 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				7FBA7D9A8ADF21F6CBE43F1F /* Wellder */,
+				485DEB3D0864D3F1D568C375 /* WellderTests */,
+				CB0A18795B2B17421C40003A /* WellderUITests */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		EAD689F002F85A8955F02A4D /* Beta */ = {
+			isa = PBXGroup;
+			children = (
+				5A14FD4DE78A51855186B546 /* AlertsViews.swift */,
+				14F5AFEF42BAB64DB705118B /* AlphaDetailView.swift */,
+				5C67B7B5C26CCA71007C4438 /* BetaRootView.swift */,
+				3D078D0EFDCDA8944DCF540C /* BetaSettingsView.swift */,
+				54B87DD51B56439F6706E55F /* HeartRateView.swift */,
+				8FFF22AADCED411ED700AB5B /* LocationHistoryView.swift */,
+			);
+			path = Beta;
+			sourceTree = "<group>";
+		};
+		F320F93CBA7F0F80B2C310C9 /* WellderWatch */ = {
+			isa = PBXGroup;
+			children = (
+				884C60318B72B050E418B82B /* Assets.xcassets */,
+				20277078196FBFC7C6C766ED /* Info.plist */,
+				FA690D7C3653A603BC58A9D4 /* LiveHeartRate.swift */,
+				CA3CD09B6DE4060F7F5318CC /* WatchContentView.swift */,
+				1EFC923771BC9668982AF317 /* WatchFallMonitor.swift */,
+				BA31BA4CD952F0701A0671B5 /* WatchModel.swift */,
+				E114F35882C81C81FC94AD01 /* WellderWatch.entitlements */,
+				FDC830684774BABD4AC5A829 /* WellderWatchApp.swift */,
+			);
+			path = WellderWatch;
+			sourceTree = "<group>";
+		};
+		F99A45BDFAB4DB200AC3A6BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31F7D7EA57D86EDE80D4A460 /* alarm.caf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F383E857D05E39D69028462 /* WellderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B1B1B1C9C698243645319D /* Build configuration list for PBXNativeTarget "WellderUITests" */;
+			buildPhases = (
+				4BEBFB6D41F0F87CFF9434D1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6406FAB7015EF4E0FA22A9C /* PBXTargetDependency */,
+			);
+			name = WellderUITests;
+			packageProductDependencies = (
+			);
+			productName = WellderUITests;
+			productReference = 7161E5F27528FDFFC32327CF /* WellderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		70705D8FD8F47E547E4C1111 /* Wellder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60816E99F9113D0D594D00C0 /* Build configuration list for PBXNativeTarget "Wellder" */;
+			buildPhases = (
+				8F2471802E673872D8CFC6E4 /* Sources */,
+				95B425BA64CF8311E63FF4DD /* Resources */,
+				DBD2D9FAA886667B539D0706 /* Frameworks */,
+				6F86FFB1DCF6880A4DA87F57 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76F6A2758345448ADA10F77B /* PBXTargetDependency */,
+			);
+			name = Wellder;
+			packageProductDependencies = (
+				20CADA65C56703719626ED9B /* SharedModels */,
+				250EAF3743F4B02B5543C48B /* MonitoringCore */,
+				CDB26CB1EF37C157163CA641 /* Networking */,
+				BA30254CBE68DA172ACF0D67 /* DesignSystem */,
+			);
+			productName = Wellder;
+			productReference = 29C69440733E42B471BCDC36 /* Wellder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A89ED680E745EF516A04D63D /* WellderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF38FE27EE4E1A73362789F /* Build configuration list for PBXNativeTarget "WellderTests" */;
+			buildPhases = (
+				0DD34348024F158F25661D7F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCEB946D8166C26C61269026 /* PBXTargetDependency */,
+			);
+			name = WellderTests;
+			packageProductDependencies = (
+			);
+			productName = WellderTests;
+			productReference = 5C112136C4A09D313C766481 /* WellderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC7D97A73D263F648398E0E4 /* WellderWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DCFB59CCCA408EB2168ADF /* Build configuration list for PBXNativeTarget "WellderWatch" */;
+			buildPhases = (
+				2F7C0A84DC2FC9A275165FC9 /* Sources */,
+				6DA79AB25874365BFF32DA35 /* Resources */,
+				861B086EEEFA8FAB2D5B53D9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WellderWatch;
+			packageProductDependencies = (
+				63E6B902BA3CAFBF8C181B28 /* SharedModels */,
+				0D29E426BD74810A1CF65851 /* MonitoringCore */,
+				7B14A2AFD5602A0202D13972 /* Networking */,
+				1878AF33E0D42230C50FF9D2 /* DesignSystem */,
+			);
+			productName = WellderWatch;
+			productReference = 1BB4B1E766520A9546B36F84 /* WellderWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6005718289D447C4738663E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5F383E857D05E39D69028462 = {
+						DevelopmentTeam = KBT99X57V8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 70705D8FD8F47E547E4C1111;
+					};
+					70705D8FD8F47E547E4C1111 = {
+						DevelopmentTeam = KBT99X57V8;
+						ProvisioningStyle = Automatic;
+					};
+					A89ED680E745EF516A04D63D = {
+						DevelopmentTeam = KBT99X57V8;
+						ProvisioningStyle = Automatic;
+					};
+					BC7D97A73D263F648398E0E4 = {
+						DevelopmentTeam = KBT99X57V8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3AC8A17E8A62003D92CB2B17 /* Build configuration list for PBXProject "Wellder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7F7F3654173DF6265982AF88;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E5BB18AE75DCE7590186BCA6 /* XCLocalSwiftPackageReference "packages/WellderKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5C6DF8A7567651D48E85EE55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70705D8FD8F47E547E4C1111 /* Wellder */,
+				BC7D97A73D263F648398E0E4 /* WellderWatch */,
+				A89ED680E745EF516A04D63D /* WellderTests */,
+				5F383E857D05E39D69028462 /* WellderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DA79AB25874365BFF32DA35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3CE9EED0FF1778FD587984 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95B425BA64CF8311E63FF4DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BDB5CD688DB0BE23B045C8 /* Assets.xcassets in Resources */,
+				79B8BE610B209910CBAD9354 /* alarm.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DD34348024F158F25661D7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB75086AC782353B7D9899C /* AppLogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7C0A84DC2FC9A275165FC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B484B4D56DFDD2FAD8A6BD /* LiveHeartRate.swift in Sources */,
+				F153ED214E3DC8BF1B68494D /* WatchContentView.swift in Sources */,
+				BAA9B21EEB8A15C83011F039 /* WatchFallMonitor.swift in Sources */,
+				2C4FCC0D0C33F079D047F35B /* WatchModel.swift in Sources */,
+				238075AF9D6CF17D6023D4DD /* WellderWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BEBFB6D41F0F87CFF9434D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				620F4F0BFB8E77B5FE782512 /* EndToEndUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F2471802E673872D8CFC6E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60503CAE7C5B23B49F5FF27B /* AccountMenu.swift in Sources */,
+				17C7AE529A932E1576C57D06 /* AlarmPlayer.swift in Sources */,
+				B23CDF200E1C7F6727DD32B4 /* AlertsViews.swift in Sources */,
+				48921562F5DE588978595450 /* AlphaDetailView.swift in Sources */,
+				463B452224ED94440E0E6000 /* AlphaMonitor.swift in Sources */,
+				85AE5D7E75C1A37005B96428 /* AlphaRootView.swift in Sources */,
+				A97D75151E07E51335E4A069 /* AlphaSettingsView.swift in Sources */,
+				713CE91B227947D4C4D58CC9 /* AppDelegate.swift in Sources */,
+				F90CD016BA3332585B3090AB /* AppModel.swift in Sources */,
+				B86CC907CFF3AAAD6ADFA305 /* BetaRootView.swift in Sources */,
+				7C2A83C24B7053E807D81D2C /* BetaSettingsView.swift in Sources */,
+				DF86D2C3ED8F7F786026FB2E /* CaregiversView.swift in Sources */,
+				72AB0DD2EE5433F82B8701E9 /* CoreLocationTracker.swift in Sources */,
+				9664DD825C63AFCB28735F18 /* HealthKitHeartRate.swift in Sources */,
+				C184E7BF84369D272DBE1EE9 /* HeartRateView.swift in Sources */,
+				69F7BBFFDB999F7665589599 /* LocationHistoryView.swift in Sources */,
+				9A43E2E140132AB1F63B3495 /* MotionCollectors.swift in Sources */,
+				CD18969636EC135E33571F64 /* OnboardingView.swift in Sources */,
+				522B20616E7A0F0F69C1D304 /* PhoneWatchBridge.swift in Sources */,
+				BBEDD914194D13C11DA021EB /* PrivacyView.swift in Sources */,
+				7E7187D434A948F2820A2C73 /* RootView.swift in Sources */,
+				0DEB941CA36BCA65738D77DA /* SettingsEditor.swift in Sources */,
+				C0CA516DC9E13F7CB57327A7 /* SignInView.swift in Sources */,
+				47DB7795B7279B1C1B544CC1 /* SimulationControlsView.swift in Sources */,
+				DFFE10CE7C847AAE290D7B9E /* SystemAlarm.swift in Sources */,
+				F3A085C0C0D14CECF130B068 /* WellderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76F6A2758345448ADA10F77B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC7D97A73D263F648398E0E4 /* WellderWatch */;
+			targetProxy = 0111BCD3ECEF95353DBAD878 /* PBXContainerItemProxy */;
+		};
+		BCEB946D8166C26C61269026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70705D8FD8F47E547E4C1111 /* Wellder */;
+			targetProxy = 0F261B76AFB978D5377B4BF4 /* PBXContainerItemProxy */;
+		};
+		E6406FAB7015EF4E0FA22A9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70705D8FD8F47E547E4C1111 /* Wellder */;
+			targetProxy = 8AB0542D0C2AB00F1C6BE91C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BD9FC86FFA2DC4C89D88C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.WellderTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wellder.app/Wellder";
+			};
+			name = Debug;
+		};
+		1A72F0AAEEC28FB5208561A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.WellderUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wellder;
+			};
+			name = Debug;
+		};
+		4CF28FE803FEC0B57B0018D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = watchos/WellderWatch/WellderWatch.entitlements;
+				INFOPLIST_FILE = watchos/WellderWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.AlphaBeta.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		640A7CAFC9BC51AF3CAEBDE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.WellderUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wellder;
+			};
+			name = Release;
+		};
+		6F9713BB9AB2181393ACC400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9215F2DE065699FCB8D86802 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KBT99X57V8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		7252A32D5514690AA237AD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.WellderTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wellder.app/Wellder";
+			};
+			name = Release;
+		};
+		77E97B626B96C7D1E208D76A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = watchos/WellderWatch/WellderWatch.entitlements;
+				INFOPLIST_FILE = watchos/WellderWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.AlphaBeta.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		98D5680B40F5997F4111FBA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C727B98FCF74A62EE9EC7D /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KBT99X57V8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		9948931464DE02FA86384AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ios/Wellder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.AlphaBeta;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FB29551338191CE44AC1F29B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ios/Wellder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.AlphaBeta;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13DCFB59CCCA408EB2168ADF /* Build configuration list for PBXNativeTarget "WellderWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF28FE803FEC0B57B0018D1 /* Debug */,
+				77E97B626B96C7D1E208D76A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3AC8A17E8A62003D92CB2B17 /* Build configuration list for PBXProject "Wellder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98D5680B40F5997F4111FBA5 /* Debug */,
+				6F9713BB9AB2181393ACC400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60816E99F9113D0D594D00C0 /* Build configuration list for PBXNativeTarget "Wellder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29551338191CE44AC1F29B /* Debug */,
+				9948931464DE02FA86384AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ACF38FE27EE4E1A73362789F /* Build configuration list for PBXNativeTarget "WellderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BD9FC86FFA2DC4C89D88C16 /* Debug */,
+				7252A32D5514690AA237AD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0B1B1B1C9C698243645319D /* Build configuration list for PBXNativeTarget "WellderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A72F0AAEEC28FB5208561A7 /* Debug */,
+				640A7CAFC9BC51AF3CAEBDE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E5BB18AE75DCE7590186BCA6 /* XCLocalSwiftPackageReference "packages/WellderKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = packages/WellderKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D29E426BD74810A1CF65851 /* MonitoringCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MonitoringCore;
+		};
+		1878AF33E0D42230C50FF9D2 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		20CADA65C56703719626ED9B /* SharedModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedModels;
+		};
+		250EAF3743F4B02B5543C48B /* MonitoringCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MonitoringCore;
+		};
+		63E6B902BA3CAFBF8C181B28 /* SharedModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedModels;
+		};
+		7B14A2AFD5602A0202D13972 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		BA30254CBE68DA172ACF0D67 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		CDB26CB1EF37C157163CA641 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A6005718289D447C4738663E /* Project object */;
+}

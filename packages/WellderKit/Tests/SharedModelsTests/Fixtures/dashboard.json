@@ -1,0 +1,78 @@
+{
+  "alphas": [
+    {
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "name": "Margaret Lee",
+      "permissions": {
+        "viewLocation": true,
+        "viewMovementHistory": true,
+        "viewHeartRate": true,
+        "viewActivity": true,
+        "receiveAlerts": true,
+        "manageSettings": false,
+        "manageEmergencyContacts": false
+      },
+      "status": "red",
+      "statusReason": "No response after possible fall",
+      "isNight": false,
+      "snapshot": {
+        "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+        "lastSyncAt": "2026-05-04T14:00:00.000Z",
+        "lastHeartRate": {
+          "bpm": 69,
+          "timestamp": "2026-05-04T13:50:00.000Z",
+          "sourceDevice": "Apple Watch"
+        },
+        "lastLocation": {
+          "latitude": 41.883,
+          "longitude": -87.63,
+          "horizontalAccuracy": 15,
+          "timestamp": "2026-05-04T13:50:00.000Z"
+        },
+        "lastActivity": {
+          "activityType": "walking",
+          "confidence": "high",
+          "timestamp": "2026-05-04T13:45:00.000Z"
+        },
+        "lastMovementAt": "2026-05-04T13:45:00.000Z",
+        "recentSteps": {
+          "count": 412,
+          "from": "2026-05-04T13:35:00.000Z",
+          "to": "2026-05-04T13:45:00.000Z"
+        },
+        "lastInteractionAt": "2026-05-04T13:55:00.000Z",
+        "monitoringState": "active",
+        "batteryLevel": 0.8,
+        "simulated": true
+      },
+      "openAlerts": [
+        {
+          "alertId": "00mor9nsw035ab5b92b347",
+          "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+          "type": "possibleFall",
+          "category": "safety",
+          "severity": "critical",
+          "status": "open",
+          "title": "No response after possible fall",
+          "message": "Margaret Lee did not respond to a possible-fall check. This does not confirm an injury — please check on them.",
+          "simulated": true,
+          "occurrences": 1,
+          "detectedAt": "2026-05-04T14:00:00.000Z",
+          "receivedAt": "2026-05-04T14:00:00.000Z",
+          "escalationStep": 0,
+          "retentionDays": 365,
+          "sourceEventId": "379b80d0-0717-4710-aab0-0b8ba4dccbee",
+          "evidence": {
+            "detector": "experimental",
+            "confidence": 0.75
+          },
+          "nextEscalationAt": "2026-05-04T14:05:00.000Z",
+          "version": 3,
+          "firstNotificationSentAt": "2026-05-04T14:02:00.000Z"
+        }
+      ],
+      "staleAfterMinutes": 120
+    }
+  ],
+  "pending": []
+}

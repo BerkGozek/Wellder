@@ -1,0 +1,30 @@
+{
+  "from": "2026-05-04T11:02:00.000Z",
+  "to": "2026-05-04T14:02:00.000Z",
+  "activity": [
+    {
+      "sampleId": "f95a4327-4845-449c-a077-7335c133c62d",
+      "timestamp": "2026-05-04T13:45:00.000Z",
+      "kind": "activity",
+      "activityType": "walking",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "sampleId": "94f19a7d-9614-4714-b750-e8aa396d382b",
+      "timestamp": "2026-05-04T13:35:00.000Z",
+      "kind": "steps",
+      "count": 412,
+      "endTimestamp": "2026-05-04T13:45:00.000Z"
+    }
+  ],
+  "interactions": [
+    {
+      "sampleId": "b24ed14d-9afd-4de0-913d-7ffb4a0b2b8c",
+      "timestamp": "2026-05-04T13:55:00.000Z",
+      "kind": "interaction",
+      "source": "checkIn"
+    }
+  ]
+}

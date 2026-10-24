@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "auditId": "00mor9qdhcab843d869949",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "029f4079-520c-433c-a2d4-09db3b59fb07",
+      "action": "settings.change_requested",
+      "at": "2026-05-04T14:02:00.000Z",
+      "detail": {
+        "requestId": "00mor9qdhc60be62886f59",
+        "sections": "sleepSchedule"
+      }
+    },
+    {
+      "auditId": "00mor9qdhc83ea56fb7c9a",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "action": "relationship.permissions_changed",
+      "at": "2026-05-04T14:02:00.000Z",
+      "detail": {
+        "betaId": "029f4079-520c-433c-a2d4-09db3b59fb07",
+        "manageSettings": true
+      }
+    },
+    {
+      "auditId": "00mor9nsw0d2a3094b3605",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "action": "relationship.approved",
+      "at": "2026-05-04T14:00:00.000Z",
+      "detail": {
+        "betaId": "029f4079-520c-433c-a2d4-09db3b59fb07"
+      }
+    },
+    {
+      "auditId": "00mor9nsw0cbdb0bc7a58d",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "029f4079-520c-433c-a2d4-09db3b59fb07",
+      "action": "relationship.requested",
+      "at": "2026-05-04T14:00:00.000Z",
+      "detail": {
+        "betaId": "029f4079-520c-433c-a2d4-09db3b59fb07",
+        "invitationId": "167ce9df-d79e-4930-8287-72b09d6badcc"
+      }
+    },
+    {
+      "auditId": "00mor9nsw075c72a1cf00d",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "action": "invitation.created",
+      "at": "2026-05-04T14:00:00.000Z",
+      "detail": {
+        "invitationId": "167ce9df-d79e-4930-8287-72b09d6badcc"
+      }
+    },
+    {
+      "auditId": "00mor9nsw0255019d8aa7f",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "actorId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "action": "alpha.onboarded",
+      "at": "2026-05-04T14:00:00.000Z"
+    }
+  ]
+}

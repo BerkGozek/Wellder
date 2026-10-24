@@ -1,0 +1,42 @@
+{
+  "from": "2026-05-04T11:02:00.000Z",
+  "to": "2026-05-04T14:02:00.000Z",
+  "samples": [
+    {
+      "sampleId": "bfff2446-58a4-4756-9046-186c3ddb6d1e",
+      "timestamp": "2026-05-04T12:40:00.000Z",
+      "kind": "location",
+      "latitude": 41.88,
+      "longitude": -87.63,
+      "horizontalAccuracy": 15,
+      "source": "standard"
+    },
+    {
+      "sampleId": "0ba97106-c879-4f9c-a6ba-2e8eba2ef515",
+      "timestamp": "2026-05-04T12:50:00.000Z",
+      "kind": "location",
+      "latitude": 41.881,
+      "longitude": -87.63,
+      "horizontalAccuracy": 15,
+      "source": "standard"
+    },
+    {
+      "sampleId": "9c3440fc-725e-4c8a-af03-986a00943fc2",
+      "timestamp": "2026-05-04T13:40:00.000Z",
+      "kind": "location",
+      "latitude": 41.882000000000005,
+      "longitude": -87.63,
+      "horizontalAccuracy": 15,
+      "source": "standard"
+    },
+    {
+      "sampleId": "94ec99af-bf2e-40d3-a421-73362f7a24d1",
+      "timestamp": "2026-05-04T13:50:00.000Z",
+      "kind": "location",
+      "latitude": 41.883,
+      "longitude": -87.63,
+      "horizontalAccuracy": 15,
+      "source": "standard"
+    }
+  ]
+}

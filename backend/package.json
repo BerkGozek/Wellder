@@ -1,0 +1,36 @@
+{
+  "name": "wellder-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Serverless backend for the Alpha–Beta elderly safety monitoring system",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node src/local/server.ts",
+    "dev:dynamo": "STORE=dynamo DYNAMO_ENDPOINT=http://localhost:8000 node src/local/server.ts",
+    "ddb:up": "docker compose -f docker-compose.yml up -d",
+    "ddb:down": "docker compose -f docker-compose.yml down",
+    "test": "node --test --test-concurrency=1 'tests/**/*.test.ts'",
+    "test:dynamo": "DYNAMO_TEST_ENDPOINT=http://localhost:8000 node --test --test-concurrency=1 'tests/**/*.test.ts'",
+    "typecheck": "tsc -p tsconfig.json",
+    "synth": "cdk synth --app 'node infrastructure/bin/app.ts' -c stage=dev",
+    "diff": "cdk diff --app 'node infrastructure/bin/app.ts'",
+    "deploy": "cdk deploy --app 'node infrastructure/bin/app.ts'"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.1156.0",
+    "@aws-sdk/client-dynamodb": "^3.1156.0",
+    "@aws-sdk/client-secrets-manager": "^3.1156.0",
+    "@aws-sdk/lib-dynamodb": "^3.1156.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "aws-cdk": "^2.1100.0",
+    "aws-cdk-lib": "^2.230.0",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.0",
+    "typescript": "5.9.3"
+  }
+}

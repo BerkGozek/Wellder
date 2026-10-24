@@ -1,0 +1,151 @@
+name: Wellder
+options:
+  bundleIdPrefix: com.berkgozek
+  deploymentTarget:
+    iOS: "18.0"
+    watchOS: "11.0"
+  createIntermediateGroups: true
+packages:
+  WellderKit:
+    path: packages/WellderKit
+configFiles:
+  Debug: Config/Debug.xcconfig
+  Release: Config/Release.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Same personal team as the other apps in this repo. Push notifications and time-sensitive
+    # notifications need a paid Apple Developer Program team (see AB_ENTITLEMENTS in Config/).
+    DEVELOPMENT_TEAM: KBT99X57V8
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+targets:
+  Wellder:
+    type: application
+    platform: iOS
+    sources: [ios/Wellder]
+    dependencies:
+      - package: WellderKit
+        product: SharedModels
+      - package: WellderKit
+        product: MonitoringCore
+      - package: WellderKit
+        product: Networking
+      - package: WellderKit
+        product: DesignSystem
+      - target: WellderWatch
+    info:
+      path: ios/Wellder/Info.plist
+      properties:
+        CFBundleDisplayName: Wellder
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        ABBackendMode: $(AB_BACKEND_MODE)
+        ABAPIBaseURL: $(AB_API_BASE_URL)
+        ABCognitoDomain: $(AB_COGNITO_DOMAIN)
+        ABCognitoClientId: $(AB_COGNITO_CLIENT_ID)
+        ABAPNsEnvironment: $(AB_APNS_ENVIRONMENT)
+        NSHealthShareUsageDescription: Wellder reads heart-rate measurements from Apple Health so the caregivers you approve can see them and be alerted to readings outside the range you set.
+        NSHealthUpdateUsageDescription: Wellder does not write to Apple Health.
+        NSLocationWhenInUseUsageDescription: Wellder shares your location with the caregivers you approve.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Allowing location "Always" lets Wellder keep your approved caregivers updated while the app is closed. You can turn this off at any time.
+        NSLocalNetworkUsageDescription: Wellder connects to a development server on your local network during testing.
+        NSAlarmKitUsageDescription: Wellder sounds an alarm, even on silent, when someone you look after needs attention or your own heart rate is outside your limits.
+        ABCriticalAlertsEntitled: $(AB_CRITICAL_ALERTS_ENTITLED)
+        NSMotionUsageDescription: Wellder uses motion and step data to estimate whether you have been moving recently, and for experimental fall detection.
+        # audio: the Beta's opt-in "Overnight alarm" (keeps the app running so alarms can sound).
+        UIBackgroundModes: [location, fetch, remote-notification, audio]
+        BGTaskSchedulerPermittedIdentifiers: [com.berkgozek.AlphaBeta.refresh]
+        CFBundleURLTypes:
+          - CFBundleURLName: com.berkgozek.AlphaBeta
+            CFBundleURLSchemes: [wellder]
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        # Keep fixed: a different bundle ID makes iOS treat it as a new app.
+        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.AlphaBeta
+        # Entitlements file comes from Config/Base.xcconfig (AB_ENTITLEMENTS) so a paid team can
+        # switch to the full set without editing this file.
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+  WellderWatch:
+    type: application
+    platform: watchOS
+    sources: [watchos/WellderWatch]
+    dependencies:
+      - package: WellderKit
+        product: SharedModels
+      - package: WellderKit
+        product: MonitoringCore
+      - package: WellderKit
+        product: Networking
+      - package: WellderKit
+        product: DesignSystem
+    info:
+      path: watchos/WellderWatch/Info.plist
+      properties:
+        CFBundleDisplayName: Wellder
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.berkgozek.AlphaBeta
+        # Required by CMFallDetectionManager (the app crashes without it). The API itself only
+        # works once Apple grants the Fall Detection entitlement — see docs/feasibility.md.
+        NSFallDetectionUsageDescription: If your Apple Watch detects a hard fall, Wellder can notify the caregivers you approved.
+        ABFallDetectionEntitled: $(AB_FALL_DETECTION_ENTITLED)
+        NSHealthShareUsageDescription: Wellder shows your heart rate on your watch and shares it with the caregivers you approved.
+        NSHealthUpdateUsageDescription: Live heart rate runs a workout session on your watch so heart rate is measured every few seconds. It isn't saved as a workout.
+        # Keeps a live heart-rate session running when the wrist is down.
+        WKBackgroundModes: [workout-processing]
+    entitlements:
+      path: watchos/WellderWatch/WellderWatch.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.AlphaBeta.watchkitapp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+  WellderTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [ios/WellderTests]
+    dependencies:
+      - target: Wellder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.WellderTests
+        GENERATE_INFOPLIST_FILE: YES
+  WellderUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [ios/WellderUITests]
+    dependencies:
+      - target: Wellder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.WellderUITests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Wellder
+schemes:
+  WellderWatch:
+    build:
+      targets:
+        WellderWatch: all
+  Wellder:
+    build:
+      targets:
+        Wellder: all
+    test:
+      targets:
+        - WellderTests
+        - WellderUITests

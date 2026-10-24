@@ -1,0 +1,21 @@
+{
+  "invitation": {
+    "invitationId": "167ce9df-d79e-4930-8287-72b09d6badcc",
+    "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+    "alphaName": "Margaret Lee",
+    "permissions": {
+      "viewLocation": true,
+      "viewMovementHistory": true,
+      "viewHeartRate": true,
+      "viewActivity": true,
+      "receiveAlerts": true,
+      "manageSettings": false,
+      "manageEmergencyContacts": false
+    },
+    "createdAt": "2026-05-04T14:00:00.000Z",
+    "expiresAt": "2026-05-05T14:00:00.000Z",
+    "codeHint": "VH"
+  },
+  "code": "8BPYWDVH",
+  "link": "wellder://invite/8BPYWDVH"
+}

@@ -1,0 +1,26 @@
+{
+  "requests": [
+    {
+      "requestId": "00mor9qdhc60be62886f59",
+      "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+      "requestedBy": "029f4079-520c-433c-a2d4-09db3b59fb07",
+      "requestedByName": "Daniel Lee",
+      "changes": {
+        "sleepSchedule": {
+          "enabled": true,
+          "bedtime": "22:00",
+          "wakeTime": "07:00",
+          "timeZone": "America/Chicago",
+          "keepFallDetectionAtNight": true,
+          "override": {
+            "mode": "forceNight",
+            "until": "2026-05-04T15:02:00.000Z"
+          }
+        }
+      },
+      "status": "pending",
+      "createdAt": "2026-05-04T14:02:00.000Z",
+      "reason": "Try night mode"
+    }
+  ]
+}

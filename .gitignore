@@ -1,0 +1,22 @@
+# Backend
+backend/node_modules/
+backend/cdk.out/
+backend/.env.local
+# Simulator CLI state (contains local test credentials)
+simulations/.sim-state.json
+# Xcode
+WellderNoWatch.xcodeproj/
+xcuserdata/
+DerivedData/
+*.xcresult
+# Swift package build output
+packages/WellderKit/.build/
+packages/WellderKit/.swiftpm/
+# Per-developer config (may contain your deployment's IDs)
+Config/Overrides.xcconfig
+
+# Stray xcodebuild output
+build/
+
+# Local development log (test results, blockers, roadmap); kept out of the public repo
+PROGRESS.md

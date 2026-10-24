@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "userId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+    "name": "Margaret Lee",
+    "email": "alpha@fixture.test",
+    "phoneNumber": "+15555550142",
+    "roles": [
+      "alpha"
+    ],
+    "authenticationProvider": "dev",
+    "createdAt": "2026-05-04T14:00:00.000Z",
+    "updatedAt": "2026-05-04T14:00:00.000Z"
+  }
+}

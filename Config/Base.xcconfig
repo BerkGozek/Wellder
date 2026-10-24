@@ -1,0 +1,28 @@
+// Backend selection. Values are read at runtime from Info.plist (see BackendConfiguration).
+// No secrets belong here: the Cognito app client is public (PKCE) and IDs are not credentials.
+// Note: "//" starts a comment in xcconfig, hence the $() in URLs.
+AB_BACKEND_MODE = local
+AB_API_BASE_URL = http:/$()/127.0.0.1:8787
+AB_COGNITO_DOMAIN =
+AB_COGNITO_CLIENT_ID =
+AB_APNS_ENVIRONMENT = development
+
+// Signing entitlements. Free personal teams can't sign push or time-sensitive notifications, so
+// the default is the HealthKit-only set: no push, notifications arrive at normal priority, and
+// Betas see new alerts by polling. With a paid team, override in Overrides.xcconfig:
+//   AB_ENTITLEMENTS = ios/Wellder/Wellder.entitlements
+AB_ENTITLEMENTS = ios/Wellder/Wellder-PersonalTeam.entitlements
+CODE_SIGN_ENTITLEMENTS = $(AB_ENTITLEMENTS)
+
+// Set to YES only after Apple grants the Fall Detection entitlement and it's added to the watch
+// target. Without the entitlement, touching CMFallDetectionManager crashes the watch app.
+AB_FALL_DETECTION_ENTITLED = NO
+
+// Set to YES only after Apple grants Critical Alerts (paid team; developer.apple.com/contact/request/
+// notifications-critical-alerts-entitlement) and com.apple.developer.usernotifications.critical-alerts
+// is in the entitlements file. Notifications then show red and ignore silent mode and Focus.
+AB_CRITICAL_ALERTS_ENTITLED = NO
+
+// Optional, git-ignored per-developer overrides (e.g. your Mac's LAN IP for a physical device,
+// or the AWS outputs after `cdk deploy`). Copy Config/Overrides.xcconfig.example.
+#include? "Overrides.xcconfig"

@@ -1,0 +1,15 @@
+// Copy to Config/Overrides.xcconfig (git-ignored) and fill in.
+
+// Physical iPhone against the local backend: use your Mac's LAN address and run the backend
+// with HOST=0.0.0.0 (see README).
+// AB_API_BASE_URL = http:/$()/192.168.1.20:8787
+
+// Deployed AWS stack (values from `cdk deploy` outputs):
+// AB_BACKEND_MODE = aws
+// AB_API_BASE_URL = https:/$()/abc123.execute-api.us-east-1.amazonaws.com
+// AB_COGNITO_DOMAIN = https:/$()/wellder-dev.auth.us-east-1.amazoncognito.com
+// AB_COGNITO_CLIENT_ID = 1h2g3f4e5d6c7b8a9
+
+// Paid Apple Developer Program team (also set DEVELOPMENT_TEAM in project.yml): full
+// entitlements (push, time-sensitive notifications).
+// AB_ENTITLEMENTS = ios/Wellder/Wellder.entitlements

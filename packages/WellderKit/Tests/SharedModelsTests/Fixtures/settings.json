@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "alphaId": "c9efad93-1497-451e-b0d6-5f4b25c77340",
+    "version": 1,
+    "sleepSchedule": {
+      "enabled": false,
+      "bedtime": "22:00",
+      "wakeTime": "07:00",
+      "timeZone": "America/Chicago",
+      "keepFallDetectionAtNight": true
+    },
+    "heartRate": {
+      "enabled": true,
+      "upperBpm": 120,
+      "lowerBpm": 45,
+      "persistenceSeconds": 300,
+      "cooldownSeconds": 1800
+    },
+    "movement": {
+      "enabled": true,
+      "locationEnabled": true,
+      "inactivityThresholdMinutes": 240,
+      "locationHistoryRetentionDays": 30
+    },
+    "fallDetection": {
+      "experimentalEnabled": false,
+      "systemFallDetectionEnabled": true,
+      "confirmationCountdownSeconds": 60
+    },
+    "notifications": {
+      "push": true,
+      "sms": false,
+      "voice": false,
+      "escalationDelaySeconds": 180,
+      "contactOrder": []
+    },
+    "emergency": {
+      "automaticEmergencyServices": false,
+      "emergencyNumber": "911",
+      "contacts": []
+    },
+    "dataRetention": {
+      "telemetryDays": 30,
+      "alertDays": 365
+    },
+    "staleAfterMinutes": 120,
+    "updatedAt": "2026-05-04T14:00:00.000Z",
+    "updatedBy": "c9efad93-1497-451e-b0d6-5f4b25c77340"
+  }
+}
